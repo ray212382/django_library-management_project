@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+</head>
+<body>
+    <h2>Student Profile</h2>
+    {% if student and extra %}
+    <table>
+        <tr>
+        <td>Name:</td><td>{{student.first_name}} {{student.last_name}}</td><br>
+        <tr>
+        <tr><td>Email:</td><td>{{student.email}}</td><br>
+        </tr>
+        <tr><td>Branch:</td><td>{{extra.branch}}</td><br>
+        </tr>
+        <tr><td>Enrollment:</td><td>{{extra.enrollment}}</td>
+        </tr>
+    </table>
+       
+    {% endif %}
+    
+    <button><a href="{% url 'library:postlogin' %}">Back</a></button>
+</body>
+</html>

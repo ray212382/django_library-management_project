@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+       
+                {% if li1 %}
+                <table border="2">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Enrollment</th>
+                            <th>Branch</th>
+                            <th>Book Name</th>
+                            <th>Author</th>
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        {% for t in li1 %}
+                        <tr>
+                            <td> {{t.0}}</td>
+                            <td> {{t.1}}</td>
+                            <td> {{t.2}}</td>
+                            <td> {{t.3}}</td>
+                            <td> {{t.4}}</td>
+                        </tr>
+    
+                        {% endfor %}
+                    </tbody>
+                </table>
+    
+            </div>
+    
+            <div class="col-lg-6" style="padding-left:0px;">
+    
+                <table border='2'>
+                    <thead>
+                        <tr>
+                            <th>Issue Date</th>
+                            <th>Expiry Date</th>
+                            <th>Fine</th>
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        {% for t in li2 %}
+                        <tr>
+                            <td> {{t.0}}</td>
+                            <td> {{t.1}}</td>
+                            <td> {{t.2}}</td>
+                        </tr>
+   
+                        {% endfor %}
+                    </tbody>
+                </table>
+                {% else %}
+                <h1> No book Issued to you</h1>
+                {% endif %}
+    
+            </div>
+        </div>
+ <a href="{% url 'library:postlogin' %}"><h4>Back</h4></a>
+</body>
+</html>

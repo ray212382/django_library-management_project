@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add book</title>
+</head>
+<body>
+    <h1> Admin Pannel</h1>
+    <a href="{% url 'library:addbook' %}"><h3>Add Book</h3></a>
+    <a href="{% url 'library:issuebookview' %}"><h3>Issue Book</h3></a>
+    <a href="{% url 'library:issuedbookview' %}"><h3>View Issued Books</h3></a>
+    <a href="{% url 'library:searchbook' %}"><h3>Search Book by Name</h3></a>
+     <a href="{% url 'library:adminprofile' pk=myuser.id %}"><h3>view Profile</h3></a>
+     <a href="{% url 'library:logout' %}"><h4>Logout</h4></a>
+</body>
+</html>
